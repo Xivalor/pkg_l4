@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Базовые растровые алгоритмы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Базовые растровые алгоритмы</h2>
+
+  <div id="top-panel">
+    <label for="algo">Алгоритм:</label>
+    <select id="algo">
+      <option value="step">Пошаговый</option>
+      <option value="dda">ЦДА</option>
+      <option value="bresenham">Брезенхем (отрезок)</option>
+      <option value="circle">Брезенхем (окружность)</option>
+    </select>
+
+    <label>X₀: <input type="number" id="x0" value="0"></label>
+    <label>Y₀: <input type="number" id="y0" value="0"></label>
+    <label>X₁: <input type="number" id="x1" value="5"></label>
+    <label>Y₁: <input type="number" id="y1" value="3"></label>
+    <label>R: <input type="number" id="r" value="5"></label>
+
+    <button id="drawBtn">Построить</button>
+    <button id="clearBtn">Очистить</button>
+  </div>
+
+  <div class="workspace">
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <div id="log-panel">
+      <h3>Промежуточные вычисления</h3>
+      <pre id="log"></pre>
+    </div>
+  </div>
+
+  <div id="info" class="info">
+    Выберите точки на поле или введите координаты вручную
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
